@@ -4,4 +4,4 @@ Allow: /
 # Página legal não precisa indexar
 Disallow: /politica-de-privacidade.html
 
-Sitemap: https://doutorrefrigeracao.com.br/sitemap.xml
+Sitemap: https://doutorefrigeracaoitajai.com.br/sitemap.xml

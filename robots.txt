@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.doutorefrigeracaoitajai.com.br/sitemap.xml
+# Página legal não precisa indexar
+Disallow: /politica-de-privacidade.html
+
+Sitemap: https://doutorrefrigeracao.com.br/sitemap.xml

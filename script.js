@@ -1,13 +1,50 @@
 /* ============================================================
    DOUTOR REFRIGERAÇÃO — script.js
-   Removidos: depoimentos fabricados, contador de "visitantes ao vivo"
-   e contadores numéricos não confirmados (números/estatísticas).
+   Compartilhado por TODAS as páginas (home + páginas de serviço).
+   Sem depoimentos fabricados, sem contadores de "visitantes ao vivo".
    ============================================================ */
+
+/* ------------------------------------------------------------
+   CONFIG CENTRALIZADO
+   Mude o número/telefone/link AQUI e propaga para o site inteiro.
+   As mensagens pré-preenchidas de cada link são preservadas —
+   só o número é sincronizado.
+   ------------------------------------------------------------ */
+const CONFIG = {
+  whatsapp: '5547996658025',                 // só dígitos, com DDI+DDD
+  phoneDisplay: '(47) 99665-8025',
+  googleReview: 'https://share.google/SREDBAS2wXVk41hWU'
+};
+
+/* Sincroniza número em todos os links de WhatsApp / telefone / Google */
+function initContactSync() {
+  const wa = CONFIG.whatsapp;
+
+  // wa.me/<numero>?text=...
+  document.querySelectorAll('a[href*="wa.me/"]').forEach(a => {
+    a.href = a.href.replace(/wa\.me\/\+?\d+/, 'wa.me/' + wa);
+  });
+
+  // api.whatsapp.com/send?phone=<numero>...
+  document.querySelectorAll('a[href*="api.whatsapp.com"]').forEach(a => {
+    a.href = a.href.replace(/phone=%2B?\+?\d+/, 'phone=' + wa);
+  });
+
+  // tel:
+  document.querySelectorAll('a[href^="tel:"]').forEach(a => {
+    a.href = 'tel:+' + wa;
+  });
+
+  // Link do Google (avaliações)
+  document.querySelectorAll('a[href*="share.google"]').forEach(a => {
+    a.href = CONFIG.googleReview;
+  });
+}
 
 /* SCROLL ANIMATIONS */
 function initScrollAnimations() {
   const fadeEls = document.querySelectorAll(
-    '.service-card, .step, .trust-item, .problem-card, .why-card, .equip-chips li, .brand-item, .regiao-list li, .faq-item, .social-card'
+    '.service-card, .step, .trust-item, .problem-card, .why-card, .equip-chips li, .brand-item, .regiao-list li, .faq-item, .social-card, .related-card, .svc-check li'
   );
   fadeEls.forEach(el => el.classList.add('fade-up'));
   const obs = new IntersectionObserver((entries) => {
@@ -16,7 +53,7 @@ function initScrollAnimations() {
   fadeEls.forEach(el => obs.observe(el));
 }
 
-/* SMOOTH SCROLL */
+/* SMOOTH SCROLL (apenas âncoras da mesma página) */
 function initSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', e => {
@@ -90,6 +127,7 @@ function initNavbarScroll() {
 
 /* INIT */
 document.addEventListener('DOMContentLoaded', () => {
+  initContactSync();
   initScrollAnimations();
   initSmoothScroll();
   initFloatWA();

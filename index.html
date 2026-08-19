@@ -94,11 +94,11 @@
           "@type": "OfferCatalog",
           "name": "Serviços de Refrigeração",
           "itemListElement": [
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Conserto de Geladeira" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Conserto de Freezer" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Conserto de Cervejeira" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Conserto de Frigobar" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Conserto de Expositor Refrigerado" } }
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Conserto de Geladeira", "url": "https://doutorrefrigeracao.com.br/conserto-de-geladeira.html" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Conserto de Freezer", "url": "https://doutorrefrigeracao.com.br/conserto-de-freezer.html" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Conserto de Cervejeira", "url": "https://doutorrefrigeracao.com.br/conserto-de-cervejeira.html" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Conserto de Frigobar", "url": "https://doutorrefrigeracao.com.br/conserto-de-frigobar.html" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Conserto de Expositor Refrigerado", "url": "https://doutorrefrigeracao.com.br/conserto-de-expositor.html" } }
           ]
         }
       },
@@ -244,12 +244,6 @@
             <span class="hcc-ic pin" aria-hidden="true">📍</span>
             <span><strong>Itajaí e região</strong><small>Navegantes · BC · Camboriú · Penha</small></span>
           </div>
-          <!-- TODO HORÁRIO: confirme o horário de atendimento real e reative:
-          <div class="hcc-row static">
-            <span class="hcc-ic clock">🕐</span>
-            <span><strong>Seg a Sáb</strong><small>Horário de atendimento</small></span>
-          </div>
-          -->
         </div>
       </aside>
     </div>
@@ -268,7 +262,6 @@
       <div class="trust-item"><span class="trust-icon" aria-hidden="true">🧾</span><div><strong>Você aprova o orçamento</strong><small>Antes de qualquer reparo</small></div></div>
       <div class="trust-divider" aria-hidden="true"></div>
       <div class="trust-item"><span class="trust-icon" aria-hidden="true">💬</span><div><strong>Contato direto</strong><small>Sem intermediário</small></div></div>
-      <!-- TODO: quando confirmar, adicione aqui itens reais como "+X clientes atendidos", "Garantia no serviço" ou "X anos de experiência". Não usar sem confirmação. -->
     </div>
   </section>
 
@@ -302,63 +295,78 @@
       <div class="section-header">
         <span class="section-tag">O que consertamos</span>
         <h2>Assistência Técnica de <span class="blue-text">Refrigeração em Itajaí</span></h2>
-        <p>Atendemos residências e comércios em Itajaí e região.</p>
+        <p>Atendemos residências e comércios em Itajaí e região. Clique no serviço para ver os detalhes.</p>
       </div>
       <div class="services-grid">
-
-        <article class="service-card">
-          <div class="svc-img-wrap">
-            <img src="image.png" alt="Conserto de geladeira em Itajaí" class="svc-img" loading="lazy" width="300" height="200" onerror="this.parentElement.classList.add('svc-img-fallback')">
-          </div>
-          <div class="svc-body">
-            <h3>Conserto de Geladeira</h3>
-            <p class="svc-desc">Geladeira que não gela, faz barulho, vaza água ou consome muita energia — incluindo recarga de gás.</p>
-            <a href="https://wa.me/5547996658025?text=Preciso%20de%20conserto%20de%20geladeira%20em%20Itaja%C3%AD." class="service-link" target="_blank" rel="noopener">Pedir orçamento →</a>
-          </div>
-        </article>
-
-        <article class="service-card">
-          <div class="svc-img-wrap">
-            <img src="image copy.png" alt="Conserto de freezer" class="svc-img" loading="lazy" width="300" height="200" onerror="this.parentElement.classList.add('svc-img-fallback')">
-          </div>
-          <div class="svc-body">
-            <h3>Conserto de Freezer</h3>
-            <p class="svc-desc">Freezer que descongela sozinho, acumula gelo em excesso ou não resfria como deveria.</p>
-            <a href="https://wa.me/5547996658025?text=Preciso%20de%20conserto%20de%20freezer%20em%20Itaja%C3%AD." class="service-link" target="_blank" rel="noopener">Pedir orçamento →</a>
-          </div>
-        </article>
 
         <article class="service-card featured">
           <div class="service-badge">Mais solicitado</div>
           <div class="svc-img-wrap">
+            <img src="image.png" alt="Conserto de geladeira em Itajaí" class="svc-img" loading="lazy" width="300" height="200" onerror="this.parentElement.classList.add('svc-img-fallback')">
+          </div>
+          <div class="svc-body">
+            <h3><a href="conserto-de-geladeira.html">Conserto de Geladeira</a></h3>
+            <p class="svc-desc">Geladeira que não gela, faz barulho, vaza água ou consome muita energia — incluindo recarga de gás.</p>
+            <div class="svc-actions">
+              <a href="conserto-de-geladeira.html" class="service-link">Ver detalhes →</a>
+              <a href="https://wa.me/5547996658025?text=Preciso%20de%20conserto%20de%20geladeira%20em%20Itaja%C3%AD." class="svc-wa-mini" target="_blank" rel="noopener">WhatsApp</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="svc-img-wrap">
+            <img src="image copy.png" alt="Conserto de freezer em Itajaí" class="svc-img" loading="lazy" width="300" height="200" onerror="this.parentElement.classList.add('svc-img-fallback')">
+          </div>
+          <div class="svc-body">
+            <h3><a href="conserto-de-freezer.html">Conserto de Freezer</a></h3>
+            <p class="svc-desc">Freezer que descongela sozinho, acumula gelo em excesso ou não resfria como deveria.</p>
+            <div class="svc-actions">
+              <a href="conserto-de-freezer.html" class="service-link">Ver detalhes →</a>
+              <a href="https://wa.me/5547996658025?text=Preciso%20de%20conserto%20de%20freezer%20em%20Itaja%C3%AD." class="svc-wa-mini" target="_blank" rel="noopener">WhatsApp</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="svc-img-wrap">
             <img src="image copy 2.png" alt="Conserto de cervejeira em Itajaí" class="svc-img" loading="lazy" width="300" height="200" onerror="this.parentElement.classList.add('svc-img-fallback')">
           </div>
           <div class="svc-body">
-            <h3>Conserto de Cervejeira</h3>
+            <h3><a href="conserto-de-cervejeira.html">Conserto de Cervejeira</a></h3>
             <p class="svc-desc">Cervejeira que não atinge a temperatura ideal, com compressor ou termostato com defeito.</p>
-            <a href="https://wa.me/5547996658025?text=Preciso%20de%20conserto%20de%20cervejeira%20em%20Itaja%C3%AD." class="service-link" target="_blank" rel="noopener">Pedir orçamento →</a>
+            <div class="svc-actions">
+              <a href="conserto-de-cervejeira.html" class="service-link">Ver detalhes →</a>
+              <a href="https://wa.me/5547996658025?text=Preciso%20de%20conserto%20de%20cervejeira%20em%20Itaja%C3%AD." class="svc-wa-mini" target="_blank" rel="noopener">WhatsApp</a>
+            </div>
           </div>
         </article>
 
         <article class="service-card">
           <div class="svc-img-wrap">
-            <img src="image copy 3.png" alt="Conserto de frigobar" class="svc-img" loading="lazy" width="300" height="200" onerror="this.parentElement.classList.add('svc-img-fallback')">
+            <img src="image copy 3.png" alt="Conserto de frigobar em Itajaí" class="svc-img" loading="lazy" width="300" height="200" onerror="this.parentElement.classList.add('svc-img-fallback')">
           </div>
           <div class="svc-body">
-            <h3>Conserto de Frigobar</h3>
+            <h3><a href="conserto-de-frigobar.html">Conserto de Frigobar</a></h3>
             <p class="svc-desc">Frigobar que não resfria, com compressor, termostato ou vedação da porta com problema.</p>
-            <a href="https://wa.me/5547996658025?text=Preciso%20de%20conserto%20de%20frigobar%20em%20Itaja%C3%AD." class="service-link" target="_blank" rel="noopener">Pedir orçamento →</a>
+            <div class="svc-actions">
+              <a href="conserto-de-frigobar.html" class="service-link">Ver detalhes →</a>
+              <a href="https://wa.me/5547996658025?text=Preciso%20de%20conserto%20de%20frigobar%20em%20Itaja%C3%AD." class="svc-wa-mini" target="_blank" rel="noopener">WhatsApp</a>
+            </div>
           </div>
         </article>
 
         <article class="service-card">
           <div class="svc-img-wrap">
-            <img src="image copy 4.png" alt="Conserto de expositor refrigerado" class="svc-img" loading="lazy" width="300" height="200" onerror="this.parentElement.classList.add('svc-img-fallback')">
+            <img src="image copy 4.png" alt="Conserto de expositor refrigerado em Itajaí" class="svc-img" loading="lazy" width="300" height="200" onerror="this.parentElement.classList.add('svc-img-fallback')">
           </div>
           <div class="svc-body">
-            <h3>Conserto de Expositor</h3>
+            <h3><a href="conserto-de-expositor.html">Conserto de Expositor</a></h3>
             <p class="svc-desc">Expositor refrigerado com temperatura instável, condensação excessiva ou motor com defeito.</p>
-            <a href="https://wa.me/5547996658025?text=Preciso%20de%20conserto%20de%20expositor%20refrigerado%20em%20Itaja%C3%AD." class="service-link" target="_blank" rel="noopener">Pedir orçamento →</a>
+            <div class="svc-actions">
+              <a href="conserto-de-expositor.html" class="service-link">Ver detalhes →</a>
+              <a href="https://wa.me/5547996658025?text=Preciso%20de%20conserto%20de%20expositor%20refrigerado%20em%20Itaja%C3%AD." class="svc-wa-mini" target="_blank" rel="noopener">WhatsApp</a>
+            </div>
           </div>
         </article>
 
@@ -384,7 +392,6 @@
         <li>Frigobar</li>
         <li>Expositor refrigerado</li>
       </ul>
-      <!-- TODO: se algum tipo NÃO for atendido, remova o item correspondente acima. -->
     </div>
   </section>
 
@@ -419,8 +426,6 @@
         <div class="why-card"><span class="why-ic" aria-hidden="true">🛠️</span><h3>Especializado em refrigeração</h3><p>Foco em geladeiras, freezers, cervejeiras, frigobares e expositores.</p></div>
         <div class="why-card"><span class="why-ic" aria-hidden="true">🧾</span><h3>Você aprova antes</h3><p>O orçamento é apresentado antes do reparo. Nada é feito sem a sua autorização.</p></div>
         <div class="why-card"><span class="why-ic" aria-hidden="true">💬</span><h3>Contato direto</h3><p>Você fala direto com quem faz o atendimento, pelo WhatsApp ou telefone.</p></div>
-        <!-- TODO E-E-A-T: quando tiver confirmados, adicione cards reais de "Anos de experiência", "Garantia no serviço",
-             "Nº de clientes atendidos" e fotos reais de serviços. Não usar sem confirmação. -->
       </div>
     </div>
   </section>
@@ -433,7 +438,6 @@
         <h2>Marcas que <span class="blue-text">atendemos</span></h2>
         <p>Atendemos equipamentos das principais marcas do mercado. Não somos assistência técnica autorizada de nenhuma marca.</p>
       </div>
-      <!-- TODO MARCAS: confirme a lista de marcas realmente atendidas e ajuste abaixo. -->
       <div class="brands-grid">
         <div class="brand-item"><span class="brand-name">Brastemp</span></div>
         <div class="brand-item"><span class="brand-name">Electrolux</span></div>
@@ -456,23 +460,10 @@
         <p>Avaliações reais dos clientes no Google.</p>
       </div>
 
-      <!-- TODO AVALIAÇÕES REAIS: cole aqui de 3 a 6 depoimentos REAIS do seu perfil do Google
-           (nome do cliente + texto). Enquanto não houver, mantenha apenas o CTA abaixo.
-      <div class="reviews-grid">
-        <blockquote class="review-real">
-          <p>"Texto real do cliente…"</p>
-          <cite>Nome do cliente — Cidade</cite>
-        </blockquote>
-      </div>
-      -->
-
       <div class="reviews-cta-box">
         <p>Veja as avaliações no perfil do Google da Doutor Refrigeração.</p>
         <a href="https://share.google/SREDBAS2wXVk41hWU" target="_blank" rel="noopener" class="btn-cta-blue">Ver avaliações no Google</a>
       </div>
-
-      <!-- TODO FOTOS: se tiver fotos REAIS de serviços realizados, crie aqui uma galeria
-           "Serviços realizados em Itajaí e região" com alt text descritivo em cada imagem. -->
     </div>
   </section>
 
@@ -502,7 +493,6 @@
       </div>
 
       <h3 class="regiao-title">Cidades atendidas</h3>
-      <!-- TODO CIDADES: confirme a lista real de cidades atendidas e ajuste abaixo. -->
       <ul class="regiao-list">
         <li><strong>Itajaí</strong> · sede</li>
         <li>Navegantes</li>
@@ -626,13 +616,15 @@
         <p>Conserto especializado em refrigeração<br>Itajaí/SC e região</p>
       </div>
       <nav class="footer-links" aria-label="Rodapé">
-        <a href="#servicos">Serviços</a>
-        <a href="#porque">Por que escolher</a>
+        <a href="conserto-de-geladeira.html">Conserto de Geladeira</a>
+        <a href="conserto-de-freezer.html">Conserto de Freezer</a>
+        <a href="conserto-de-cervejeira.html">Conserto de Cervejeira</a>
+        <a href="conserto-de-frigobar.html">Conserto de Frigobar</a>
+        <a href="conserto-de-expositor.html">Conserto de Expositor</a>
         <a href="#regiao">Região atendida</a>
         <a href="#faq">Dúvidas</a>
         <a href="#contato">Contato</a>
-        <!-- TODO: crie /politica-de-privacidade e aponte o link abaixo. -->
-        <a href="/politica-de-privacidade">Política de Privacidade</a>
+        <a href="politica-de-privacidade.html">Política de Privacidade</a>
       </nav>
       <div class="footer-contact">
         <p>📱 (47) 99665-8025</p>
